@@ -1,0 +1,665 @@
+/*
+Theme Name: WikiWP
+Theme URI: http://wikiwp.com
+Author: Chereshka.net & Florian Steller
+Description: Powerful Wiki-style theme for WordPress. WikiWP is best suited for an encyclopedic website. The theme gives you the opportunity to turn your blog into an encyclopedia! Now you can build our own Wikipedia using the advantages of WordPress. Easy to use and modify, clean and understandable code. WikiWP focuses on the content and is also SEO-friendly.
+Version: 1.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: white, light, silver, gray, two-columns, fluid-layout, custom-header
+Text Domain: wikiwp
+*/
+
+/*
+colors:
+links         = #1A0DAB
+links hover   = #0781FF
+links active  = #0781FF
+gray light    = #252525
+green         = #1CB806
+yellow        = #FFB806
+red           = #FF2706
+*/
+
+html, body 
+  {
+	font-family: sans-serif;
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+	color: #252525;
+  background-color: #F9F9F9;
+  }
+
+
+/* REQUIRED FOR WORDPRESS */
+.sticky {}
+
+.bypostauthor {}
+
+
+/* FONTS */
+h1, h2, h3 
+  {
+  font-family: 'Linux Libertine',Georgia,Times,serif;
+  font-weight: normal;
+  }
+
+h3 
+  {
+  font-family: sans-serif;
+  font-weight: bold;
+  }
+
+.container h2
+  {
+  border-bottom: 1px solid #aaaaaa;
+  }
+
+h3
+  {
+  font-weight: bold;
+  }
+
+a { color: #1A0DAB;}
+
+a:link 
+  {
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+  }
+
+a:active, a:hover  
+  {
+  color: #0781FF;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+  }
+  
+dd, dt 
+{
+  font-family: sans-serif;
+  font-size: 95%;
+}
+
+blockquote
+{
+  font-size:90%;
+  color:#333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+  {
+  -webkid-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  border: 1px solid #AAAAAA;
+  padding: 2px;
+  -webkit-transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -ms-transition: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s;
+  }
+
+textarea
+  {
+  -webkid-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  border: 1px solid #AAAAAA;
+  padding: 0.6em;
+  width: 100%;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+  }
+
+input:focus,
+textarea:focus
+  {
+  border: 1px solid #FFB806;
+  padding: 0.6em;
+  outline: none;
+  -webkit-transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -ms-transition: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s;
+  }
+
+input[type="submit"]
+  {
+  margin: 5px 0 0 0;
+  }
+
+
+  /* HEADER */
+header 
+  { 
+  margin: 10px 0 10px 200px;
+  height: 60px;
+  }
+
+
+/* SIDEBAR */
+.sidebar
+  {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 160px;
+  padding: 0;
+  font-family:sans-serif;
+  font-size: 13px;
+  }
+
+#logo 
+  { 
+  cursor: pointer; 
+  width: 100%; 
+  }
+
+.logo-img
+  { 
+  height: auto;
+  width: 100%; 
+  }
+
+.blog-name
+  {
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-variant: small-caps;
+  }
+
+.blog-name a { color: #252525;}
+
+.blog-description
+  {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+  font-weight: normal;
+  }
+
+aside { margin: 30px 0; }
+
+aside .widget
+  {
+  display: block;
+  border-bottom: 1px solid #E5E5E5;
+  margin: 0;
+  padding: 1em 0;
+  color: #4D4D4D;
+  list-style: none;
+  }
+
+aside .widget li { padding: 0.2em 0; }
+
+aside .sideul,
+aside .widget ul
+  {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  }
+
+aside input#s
+  {
+   -webkid-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2px;
+  width: 100%;
+  outline: none;
+  -webkit-transition: padding 0.3s;
+  -moz-transition: padding 0.3s;
+  -ms-transition: padding 0.3s;
+  -o-transition: padding 0.3s;
+  transition: padding 0.3s;
+  }
+
+aside input#s:focus
+  {
+  padding: 0.6em;
+  -webkit-transition: padding 0.3s;
+  -moz-transition: padding 0.3s;
+  -ms-transition: padding 0.3s;
+  -o-transition: padding 0.3s;
+  transition: padding 0.3s;
+  }
+
+
+/* CONTENT */
+.container
+  {
+  padding: 20px 24px 24px 24px;
+  margin: 10px 0 0 200px;
+  background-color: white;
+  border-top: 1px solid #A7D7F9;
+  border-left: 1px solid #A7D7F9;
+  border-bottom: 1px solid #A7D7F9;
+  font-family: sans-serif;
+  }
+
+.posttitle 
+  {
+  border-bottom: 1px solid #aaaaaa;
+  font-size: 1.8em;
+  }
+
+/* POSTINFO */
+.postinfo
+  {
+  border: 1px solid #AAA;
+  clear: both;
+  margin-top: 1em;
+  padding: 0.6em;
+  background-color: #F9F9F9;
+  }
+
+/* COMMENTS */
+.comments-area {
+	background: #FAFAFA;
+	border: 1px solid #D8D8D8;
+	border-radius: 3px;
+	clear: both;
+	margin: 1em auto;
+	padding: 0.5em 1em;
+}
+
+.comments-area li {
+	margin-top: 15px;
+	padding-left: 38px;
+}
+
+.comments-area ol {
+	list-style: none;
+	padding-left: 0
+}
+
+.comments-area p {
+	margin: 0 0 10px 0
+}
+
+.comments-area .says {
+	display: none
+}
+
+.comment-author {
+	position: relative;
+	left: -38px
+}
+
+.comment-author .avatar {
+	position: absolute
+}
+
+.comment-author .fn {
+	margin-left: 38px
+}
+
+.comment-form .form-allowed-tags {
+	color: gray;
+	font-size: smaller
+}
+
+.comment-form-comment label {
+	display: none
+}
+
+#comment {
+	font-family: sans-serif;
+	height: 2em;
+	overflow: hidden;
+	padding: .5em;
+	resize: none;
+	width: 100%
+}
+
+.comment-list {
+	margin: 0 0 25px 0
+}
+
+.comment-list .reply {
+	margin-top: 1em
+}
+
+.comment-meta {
+	font-color: gray;
+	font-size: smaller;
+	margin: 2px 0
+}
+
+/* Footer */
+footer 
+  {
+  clear: both;
+  margin-top:0px;
+  padding: 24px 24px 25px 160px;
+  text-align: center;
+  }
+
+#navigation
+{
+  margin:8px;
+  font-weight:bold;
+}	
+	
+.spacer { clear: both; } 	
+
+img {
+	border : 0 none ; 
+} 
+
+.border
+{
+	border:1px solid #006699;
+	padding:8px;
+	margin:16px;
+}
+
+.author, .date, .category
+{
+  font-size:auto;
+}
+
+.edit
+{
+  font-style:normal;
+  font-weight:normal;
+  margin-left:16px;
+}
+
+.lastpostlist
+{
+  float:left;
+}
+
+.navigation 
+{
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+
+.alignright { float: right; }
+.alignleft  {	float: left;	}
+
+
+/* Home page */
+.excerpt
+{
+  margin-bottom:32px;
+}
+
+
+.summary a
+{
+  font-size:100%;
+}
+
+.postinfo a, a:link, a:visited
+{
+  font-size:100%; 
+}
+
+.homeinfo a, a:link, a:visited 
+{
+  font-size:100%;  
+}
+
+
+.more
+{
+  margin-left:16px;
+}
+
+.homeinfo
+{
+  font-size:90%;
+  font-style:italic;
+  font-weight:normal;
+  font-family:arial, sans;
+}
+
+.pagination
+{
+  font-weight:bold;
+}
+
+/* Image */
+
+img.centered 
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.alignright 
+{
+	padding: 4px;
+	margin: 0 0 4px 8px;
+	display: inline;
+}
+
+img.alignleft 
+{
+	padding: 4px;
+	margin: 0 8px 4px 0;
+	display: inline;
+}
+
+.wp-caption 
+{
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+
+.wp-caption p.wp-caption-text 
+{
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+  font-size:75%;
+}
+
+/* End Image */
+
+
+.right, .alignright
+{
+  float:right;
+  margin:8px;
+}
+
+.left, .alignleft
+{
+  float:left;
+  margin:8px;
+}
+
+.center, .aligncenter
+{
+  display: block;
+  margin: 8px auto
+}
+
+/* Elements */
+
+#searchform
+{
+  margin-top:5px;
+  margin-bottom:6px;
+}
+
+#wp-calendar
+{
+  margin-top:8px;
+  border:1px solid #CCC;
+  padding:8px;
+  background-color:white;
+  font-size:90%;
+  font-family:sans-serif;
+  font-style:normal;
+  color:#666;
+}
+
+#wp-calendar caption
+{
+  font-style:italic;
+}
+
+#wp-calendar a
+{
+  font-weight:bold;
+  color:#036;
+  text-decoration:underline;
+}
+
+#wp-calendar a:visited
+{
+  color:#333;
+}
+
+#wp-calendar a:hover
+{
+  color:red;
+}
+
+
+/* Misc. */
+
+fieldset
+{
+  padding:16px 8px 0px 8px;
+  font-size:85%;
+  -moz-border-radius:4px;
+  border-radius:4px;
+}
+
+.cat_fieldset
+{
+  padding-top:8px;
+}
+
+.cat_fieldset ul
+{
+  margin-top:8px;
+}
+
+legend
+{
+  font-style:italic;
+  color: #999;
+}
+
+.cat_legend
+{
+  padding-bottom:4px;
+}
+
+a.rsslink 
+{
+  background:url(images/rss-16.gif) top left no-repeat; 
+  padding-left: 20px;
+}
+
+/* gallery fix */
+
+#gallery-1 
+{
+  display: block;
+  overflow:hidden;
+}
+
+#gallery-1 .gallery-item 
+{
+  width:auto !important;	
+  float:center !important;		
+}
+
+#gallery-1 img 
+{
+}
+
+#gallery-1 .gallery-caption 
+{
+}
+
+/* Automatic table of contents styling */
+.wwp-toc {
+	background-color: #f9f9f9;
+	border: 1px solid #aaa;
+	font-size: 95%;
+	padding: 7px
+}
+.wwp-toc-title {
+	font-weight: bold;
+	text-align: center
+}
+.wwp-toc-sections > div {
+	margin-bottom: .1em
+}
+.wwp-toc-sections span {
+	color: #0645ad;
+	cursor: pointer
+}
+.wwp-toc-sections span:hover {
+	color: #0781FF
+}
+.wwp-toc-section-h3 {
+	text-indent: 2em
+}
+.wwp-toc-section-h4 {
+	text-indent: 4em
+}
+
+/* Styling of scrollbar in WebKit browsers. At the end in case they cause problems. */
+body::-webkit-scrollbar {
+	height: 15px;
+	width: 15px
+}
+
+body::-webkit-scrollbar-button {
+	height: 0;
+	width: 0
+}
+
+body::-webkit-scrollbar-thumb {
+	background-clip: padding-box;
+	background-color: rgba(0,0,0,.3);
+	border: 5px solid transparent;
+	border-radius: 10px;
+	min-height: 20px;
+	min-width: 20px;
+	height: 5px;
+	width: 5px
+}
+
+body::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:active {
+	background-color: rgba(0,0,0,.4)
+}
