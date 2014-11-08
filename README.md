@@ -12,6 +12,7 @@ A WordPess theme inspired by the Wikipedia look and feel. This theme was started
 ### Screenshot
 WikiWP action shots.
 * [General look and feel screenshot](screenshot.png)
+* [Latest and greatest](screenshot1.png)
 
 ### Original Authors
 * Chereshka Design
