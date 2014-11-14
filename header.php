@@ -4,7 +4,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scaleable=yes">
 		<meta name="robots" content="index, follow" />
-		<title><?php wp_title(''); ?></title>
+		<title><?php wp_title('|', true, 'right') ?></title>
 		<meta name="description" content="<?php if ( is_single() ) { single_post_title('', true); } else { bloginfo('name'); echo " - "; bloginfo('description'); } ?>" />
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
@@ -41,15 +41,15 @@
 					'</a>';
 			}
 		}
-		if (current_user_can('edit_pages')) {
+		if (current_user_can('edit_posts')) {
 			if (true === $sep) {
 				echo '&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;';
 			} else {
 				$sep = true;
 			}
 			echo '<a href="',
-				admin_url('post-new.php?post_type=page'),
-				'">New Page</a>';
+			admin_url('post-new.php'),
+			'">New Post</a>';
 		}
 		if (true === $sep) {
 			echo '&nbsp;&nbsp;&nbsp;';

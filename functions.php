@@ -38,3 +38,17 @@ function wikiwp_register_sidebar_left() {
     ) );
 }
 add_action( 'widgets_init', 'wikiwp_register_sidebar_left' );
+
+
+function wikiwp_title($title, $sep, $seplocation) {
+	if (empty($title)) {
+		return get_bloginfo('name');
+	}
+
+	if ('right' == $seplocation) {
+		return $title . get_bloginfo('name');
+	}
+
+	return get_bloginfo('name') . $title;
+}
+add_filter('wp_title', 'wikiwp_title', 10, 3);
