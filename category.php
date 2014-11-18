@@ -73,26 +73,6 @@ if (have_posts()) {
 
 		// post info
 		get_template_part('postinfo');
-
-		$cs = get_the_category();
-		if (false === empty($cs)) {
-			$ccs = array();
-			foreach ($cs as &$c) {
-				if ($cat_id === $c->parent) {
-					$ccs[] = '<a class="meta_text" href="' . get_category_link($c->term_id) . '" title="' . esc_attr(strip_tags($c->name)) . '">' . $c->name . '</a>';
-				}
-			}
-			unset($c);
-			if (false === empty($ccs)) {
-				echo '<p class="sub-category">';
-				if (isset($ccs[1])) {
-					printf(__('Filed under sub categories: %s', 'wikiwp'), implode(', ', $ccs));
-				} else {
-					printf(__('Filed under sub category: %s', 'wikiwp'), $ccs[0]);
-				}
-				echo '</p>';
-			}
-		}
 	}
 }
 echo '</div>';

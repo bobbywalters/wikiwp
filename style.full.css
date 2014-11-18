@@ -262,14 +262,15 @@ aside input#s:focus
   }
 
 /* POSTINFO */
-.postinfo
-  {
-  border: 1px solid #AAA;
-  clear: both;
-  margin-top: 1em;
-  padding: 0.6em;
-  background-color: #F9F9F9;
-  }
+.postinfo {
+	background-color: #F9F9F9;
+	border: 1px solid #AAA;
+	clear: both;
+	font-size: small;
+	font-style: italic;
+	margin-top: 1em;
+	padding: 0.6em
+}
 
 /* COMMENTS */
 .comments-area {
@@ -411,11 +412,6 @@ img {
 .summary a
 {
   font-size:100%;
-}
-
-.postinfo a, a:link, a:visited
-{
-  font-size:100%; 
 }
 
 .homeinfo a, a:link, a:visited 
