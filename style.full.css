@@ -602,12 +602,13 @@ a.rsslink
   float:center !important;		
 }
 
-#gallery-1 img 
-{
+/* Category meta information on category.php */
+.category-meta .category-children-header {
+	margin-bottom: 0
 }
 
-#gallery-1 .gallery-caption 
-{
+.category-meta .category-children {
+	margin-top: 0
 }
 
 /* Automatic table of contents styling */
